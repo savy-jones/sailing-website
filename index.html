@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sailing</title>
+    <style>
+      body {
+        background: #5dacbd;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      h1 {
+        text-align: center;
+      }
+      h2 {
+        text-align: center;
+        font-weight: 100;
+      }
+      img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        font-size: 18px;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 150ms;
+        color: white;
+        background-color: #5dacbd;
+        border-color: rgb(37, 69, 76);
+      }
+      button:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+      }
+      p {
+        margin-bottom: 40px;
+        font-size: 18px;
+      }
+      footer {
+        margin-top: 40px;
+        text-align: center;
+      }
+      a {
+        color: #24527a;
+        text-decoration: none;
+      }
+      .container {
+        max-width: 600px;
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(242, 235, 243) 0%,
+          rgb(234, 241, 249) 90.1%
+        );
+        padding: 20px;
+        border-radius: 10px;
+        margin: 20px auto;
+      }
+      .theme-button {
+        background-color: #24527a;
+        color: #e0ebeb;
+        font-size: 12px;
+        margin-top: 20px;
+      }
+      .theme-button:hover {
+        cursor: pointer;
+        background-color: #e0ebeb;
+        color: #5dacbd;
+        transform: scale(1.02);
+      }
+      .sailing-picture-link {
+        background-color: white;
+        transition: all 150ms ease-in-out;
+        border-radius: 10px;
+      }
+      .sailing-picture-link:hover {
+        opacity: 60%;
+      }
+      .grid {
+        display: grid;
+
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 20px;
+        margin-top: 20px;
+      }
+      .grid img {
+        width: 100%;
+        transition: all 150ms ease-in-out;
+      }
+      .grid img:hover {
+        transform: scale(2);
+      }
+      .dark {
+        background: linear-gradient(
+          180deg,
+          rgb(36, 45, 57) 11.2%,
+          rgb(16, 37, 60) 51.2%,
+          rgb(0, 0, 0) 98.6%
+        );
+      }
+      .dark .container {
+        background: linear-gradient(to top, #09203f 0%, #537895 100%);
+        color: #e0ebeb;
+      }
+      .dark a {
+        color: #5dacbd;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change Color Theme</button>
+    <div class="container">
+      <h1>Sailing into the Sunset</h1>
+      <h2>😎 A Great Hobby for Anyone 🌴</h2>
+
+      <a href="https://www.sailing.pics/" target="_blank"
+        ><img
+          src="https://www.yacht-rent.com/image/cache/data/articles/New-hoby-sailing-705x413.webp"
+          alt=""
+          class="sailing-picture-link"
+        />
+      </a>
+
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/496/original/Sailing-Holiday-UK-Beginner-Ocean.jpg?1674693803"
+          alt=""
+        />
+
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/493/original/435_1563396385.jpg?1674693770"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/494/original/211215_Lloyd_YouthW_110-reg.jpg?1674693782"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/495/original/Sailing-Dinghy-Holiday-UK-Beginner-Caribbean.jpg?1674693792"
+          alt=""
+        />
+      </div>
+
+      <p>
+        Sailing is a great hobby that can give you many benefits. It’s an
+        adventurous sport that will get your adrenaline pumping, and it’s also a
+        relaxing way to enjoy the scenery. It is an exhilarating sport that will
+        get your adrenaline pumping. It also provides the satisfaction of making
+        your own way across the water and allows you to explore new areas from a
+        different perspective. It will make you feel free.
+      </p>
+      <a
+        href="https://www.motoretta.ca/why-take-up-sailing-as-a-hobby/"
+        target="_blank"
+        ><button>7 Reasons to Take Up Sailing as a Hobby</button>
+      </a>
+      <footer>
+        Coded by <a href="mailto:savyjones@gmail.com">Savana Jones</a>. ⛵️
+      </footer>
+    </div>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
